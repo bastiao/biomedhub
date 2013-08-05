@@ -5,8 +5,8 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'biomedhub.views.home', name='home'),
+    
+    url(r'^$', 'biomedhub.views.home', name='home'),
     # url(r'^biomedhub/', include('biomedhub.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -14,4 +14,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+
+
+    # API
+    url(r'^api/', include('api.urls')),
 )
